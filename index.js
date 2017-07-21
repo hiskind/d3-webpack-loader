@@ -48,7 +48,7 @@ function findD3ModulesInDirectory(directoryToScan, callback) {
 function getModuleDirectories(webpackContext, resolveOptions) {
   var directories = [].concat(
     resolveOptions.root,
-    resolveOptions.modulesDirectories.map(function (dir) {
+    (resolveOptions.modulesDirectories || resolveOptions.modules).map(function (dir) {
       return path.join(webpackContext, dir);
     }),
     resolveOptions.fallback

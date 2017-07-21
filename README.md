@@ -14,16 +14,12 @@ If you are using a subset of the modules provided by the default D3 build or are
 After `npm install`ing a number of d3 modules, you can access them via `d3.___` in your code by importing `d3` with the loader. For instance, if we have installed d3-array, we can do:
 
 ```js
-import d3 from 'd3!';
+import d3 from 'd3-webpack-loader!';
 
 d3.sum([1, 2, 3, 4]); // === 10
 ```
 
-**Important!** Don't forget to include the `!` at the end of the import. That tells webpack to use the `d3-webpack-loader`. If you prefer to be more verbose about it, you can also write the import as:
-
-```js
-import d3 from 'd3-webpack-loader!';
-```
+**Important!** Don't forget to include the `!` at the end of the import. That tells webpack to use the `d3-webpack-loader`.
 
 ### Configuration
 
@@ -70,7 +66,7 @@ Doing it manually means you need to update your `d3-combined.js` file every time
 
 ### Server-side Rendering
 
-Sadly, this will not work if you are hoping to use server-side rendering, since node doesn't understand importing `'d3!'` 
+Sadly, this will not work if you are hoping to use server-side rendering, since node doesn't understand importing `'d3-webpack-loader!'`
 
 
 ## Development

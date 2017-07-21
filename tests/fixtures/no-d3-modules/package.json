@@ -10,7 +10,6 @@
   "author": "Peter Beshai <peter.beshai@gmail.com> (https://github.com/pbeshai)",
   "license": "MIT",
   "dependencies": {
-    "d3-webpack-loader": "file:../../../",
-    "webpack": "^1.13.2"
+    "d3-webpack-loader": "file:../../../../"
   }
 }
